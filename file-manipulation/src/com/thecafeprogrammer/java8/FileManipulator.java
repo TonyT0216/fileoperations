@@ -15,13 +15,16 @@ import java.util.stream.Stream;
 /**
  * The class FileManipulator takes in a File, and manipulates the output of the contents of it.  
  * 
+ * The primary concern of this class as a whole is to read information that is stored in a File, and pass that information 
+ * over to its respective FileProcessor, which will actually output the data.
+ * 
  * This class implements a FileInput interface.  
  * @author Tony Toscano
  *
  */
 public class FileManipulator implements FileInput {
 	
-	private FileProcessor processOutput;
+	private FileProcessor processOutput; // As of now, FileManipulator depends on a FileProcessor field to send input to be processed into output.
 
 	public FileManipulator() 
 	{
